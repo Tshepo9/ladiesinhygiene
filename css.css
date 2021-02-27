@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+ /* 
+ Banner
+ */
+ body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+
+.wrapper{
+  background: #3d5b94;
+  top: 70px;
+  position: absolute;
+  width: 100%;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+
+}
+
+.wrapper nav{
+  position: relative;
+  display: flex;
+  max-width: calc(100% - 200px);
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .content{
+  display: flex;
+  align-items: center;
+}
+nav .content .links{
+  margin-left: 80px;
+  display: flex;
+}
+.content .logo a{
+  color: #fff;
+  padding: 2vw;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.content .links li{
+  list-style: none;
+  line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.content .links li label{
+  display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+  background: #fff;
+  color: #3d5b94;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.logo {
+    background-color: #3d5b94;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.service-button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  
+}
+.service-button:hover {
+  color: #6dcd9a
+}
+.wrapper .search-icon{
+  color: #3d5b94;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 70px;
+  width: 70px;
+  text-align: center;
+}
+.wrapper .menu-icon{
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+  }
+.wrapper .menu-icon{
+  display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+  content: "\25AE";
+}
+
+.wrapper .search-box{
+  position: absolute;
+  height: 100%;
+  max-width: calc(100% - 50px);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+  background: #171c24;
+  padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+  color: #f2f2f2;
+}
+.search-box .go-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  width: 70px;
+  background: #171c24;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+  display: none;
+}
+
+
+/* Dropdown Menu code start */
+.content .links ul{
+  position: absolute;
+  background: #171c24;
+  top: 80px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content .links li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.content .links ul li a{
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border-radius: 0px!important;
+}
+.content .links ul ul{
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li{
+  position: relative;
+}
+.content .links ul li:hover ul{
+  top: 0;
+}
+
+/* Responsive code start */
+@media screen and (min-width: 900px){
+  .btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 1250px){
+  .wrapper nav{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  nav .content .links{
+    margin-left: 30px;
+  }
+  .content .links li a{
+    padding: 8px 13px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 100px);
+  }
+  .wrapper .search-box input{
+    padding: 0 100px 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .wrapper .menu-icon{
+    display: block;
+  }
+  .wrapper #show:checked ~ .menu-icon i::before{
+    content: " ";
+  }
+
+
+
+  
+  nav .content .links{
+    display: block;
+    position: fixed;
+    background: #6dcd9a;
+    height:20%;
+    width: 50%;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+  }
+  nav #show:checked ~ .content .links{
+    left: 0%;
+  }
+  .content .links li{
+    margin: 15px 20px;
+  }
+  .content .links li a,
+  .content .links li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  .content .links li a.desktop-link{
+    display: none;
+  }
+
+
+  /* dropdown responsive code start */
+  .content .links ul,
+  .content .links ul ul{
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-features:checked ~ ul,
+  .content .links #show-services:checked ~ ul,
+  .content .links #show-items:checked ~ ul{
+    max-height: 100vh;
+  }
+  .content .links ul li{
+    margin: 7px 20px;
+  }
+  .content .links ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+  }
+  .left, .banner, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .wrapper {
+    top: 140px;
+  }
+  .banner {
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .wrapper nav{
+    padding: 0 10px;
+  }
+  .content .logo a{
+    font-size: 5vw;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 70px);
+  }
+  .wrapper .search-box .go-icon{
+    width: 30px;
+    right: 0;
+  }
+  .wrapper .search-box input{
+    padding-right: 30px;
+  }
+  .wrapper {
+    top:auto;
+  }
+}
+
+  
+  .banner {
+    background-image: url("images/pestcontrol.jpg");
+    padding:20px;
+    float:left;
+    width:100%; /* The width is 60%, by default */
+    margin-top: 70px;
+    height: 15em;
+  }
+  @media only screen and (device-width: 768px) {
+    .banner{
+      top: 140px;
+    }
+  }
+  
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width:800px)  {
+    .left, .banner, .right {
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .wrapper {
+      top: 140px;
+    }
+    .banner {
+      top: 140px;
+    }
+  }
+/*********************************************************************************/
+/*Social icons header                                                                     */
+/*********************************************************************************/
+
+/* Colors */
+ .header {
+   position: fixed;
+   margin-top: 0;
+	 width: 100%;
+	 display: inline-block;
+	 margin: 0;
+	 height: 70px;
+	 background-color: #999;
+  z-index: 1;
+}
+ .header .copyright {
+	 width: 50%;
+	 float: left;
+   
+}
+ @media (max-width: 600px) {
+	 .header .copyright {
+		 width: 100%;
+   
+	}
+
+  @media (max-width: 800px) {
+    .header {
+      position: absolute;
+    }
+  }
+}
+ .header .copyright p {
+	 padding-left: 10%;
+	 color: #3d5b94;;
+	 font-size: 0.7em;
+	 line-height: 70px;
+	 text-transform: capitalize;
+	 letter-spacing: 1px;
+}
+ @media (max-width: 600px) {
+	 .header .copyright p {
+		 text-align: center;
+		 padding: 0;
+	}
+}
+ .header .social {
+	 width: 50%;
+	 float: right;
+}
+ @media (max-width: 600px) {
+	 .header .social {
+		 width: 100%;
+	}
+  .banner {
+    top: 140px;
+  }
+}
+ .header .social a {
+	 float: left;
+	 line-height: 70px;
+	 text-decoration: none;
+	 color: white;
+	 text-align: center;
+	 font-weight: bold;
+}
+ .header .social a:hover {
+	 background-color: #3d5b94;
+}
+
+ .face {
+	 background-color: #3d5b94;
+	 font-size: 0.7em;
+	 width: 50%;
+}
+
+ .support {
+	 background-color: #6dcd9a;
+	 font-size: 0.7em;
+   text-align: left;
+	 width: 50%;
+}
+ 
+/*********************************************************************************/
+/*Floating button                                                                */
+/*********************************************************************************/
+
+.label-container{
+	position:fixed;
+	bottom:48px;
+	right:105px;
+	display:table;
+	visibility: hidden;
+}
+
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:0;
+}
+
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
+}
+
+.float{
+	position:fixed;
+	bottom: 15em;
+	right:40px;
+	background-color:#6dcd9a;
+	color:#FFF;
+	border-radius:20px;
+	text-align:center;
+	box-shadow: 2px 2px 3px rgb(0, 0, 0);
+    margin-top: 3em;
+    font-size: 1vw;
+    padding: 1vw;
+}
+.my-float{
+	font-size:24px;
+	margin-top:18px;
+}
+
+a.float + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+a.float:hover + div.label-container{
+  visibility: visible;
+  opacity: 1;
+}
+
+  #featured
+  {
+      padding-top: 20em;
+      background: white;
+      color: #3d5b94;
+      text-align: center;
+  }
+
+  #three-blocks .button
+  {
+      background: #3d5b94;
+      margin-top: 3em;
+      font-size: 1em;
+      color: rgb(160, 160, 160);
+  }
+
+  #featured .title h2
+  {
+      color: #3d5b94;
+      font-family: 'proxima-nova', Helvetica, sans-serif;
+      text-shadow: 2px 2px 4px #000000;
+      font-size:6vw;
+  }
+  #featured .title .byline
+  {
+      line-height: 1em;
+      margin-top: 0;
+      color: #000;
+      font-size:2vw;
+      text-shadow: 2px 2px 4px #3d5b94;
+  }
+  
+
+  #featured .button:hover{
+      background-color: #3d5b94;
+      color: white;
+      outline: #3d5b94;
+  }
+  /*********************************************************************************/
+/* Button                                                                      */
+/*********************************************************************************/
+.button
+{
+    display: inline-block;
+    padding: 0em 3em;
+    background: #3d5b94;
+    border-radius: 0;
+    letter-spacing: 0.20em;
+    line-height: 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFF;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*********************************************************************************/
+                                                                   
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+.left {
+    background-color:rgb(228, 66, 66);
+    color: #fff;
+    padding:20px;
+    float:left;
+    width:33.3%; /* The width is 20%, by default */
+  }
+  
+  .main {
+    background-color:#6dcd9a;
+    color: #fff;
+    padding:20px;
+    float:left;
+    width:33.3%; /* The width is 60%, by default */
+  }
+  
+  .right {
+    background-color:#3d5b94;
+    color: #fff;
+    padding:20px;
+    float:left;
+    width:33.3%; /* The width is 20%, by default */
+  }
+  
+
+  .main .fa
+  {
+      display: block;
+      margin-bottom: 0.5em;
+      text-align: center;
+      font-size: 3em;
+  }
+  
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width:800px) {
+    .left, .main, .right {
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .float {
+        font-size: 2vw;
+    }
+  }
+
+  .box
+{
+	padding: 3em 2em 2em 2em;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  height: 40% !important;
+
+}
+
+
+
+/*///////////////////////////////////////////////////////////////
+// Footer
+////////////////////////////////////////////////////////////////*/
+/* Create three equal columns that floats next to each other */
+.column {
+  text-align: center;
+  margin-bottom: 0;
+  float: left;
+  width: 33.33%;
+  padding: 1px;
+
+}
+.column ul {
+  padding: 15px;
+  line-height: 1.5em;
+  color: #fff;
+  list-style-type: none;
+  padding-left: 10%;
+  font-size: 1em;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI';
+}
+.column .fa {
+  font-size: 0.7em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  background-color: #999;
+}
+
+/*//////////////////////////////////////////////////////////////////
+// ABOUT US
+/////////////////////////////////////////////////////////////////*/
+
+article::first-letter {
+  -webkit-initial-letter: 4 5;
+          initial-letter: 4 5;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5bca8f;
+  font-weight: bold;
+}
+
+.about-col {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.about-r::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.fa-check-circle-o::first-letter {
+
+  color: #5bca8f;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .about-col {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
