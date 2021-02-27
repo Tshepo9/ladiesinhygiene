@@ -1,15 +1,8 @@
-
-	
-	html, body
-	{
-		height: 100%;
-	}
-	
 	body
 	{
 		margin: 0px;
 		padding-left: 5px;
-		padding-right: 10px;
+		padding-right: 5px;
 		background:whitesmoke;
 		font-family: 'proxima-nova', Montserrat, sans-serif;
 		font-size: 11pt;
@@ -42,18 +35,13 @@
 		text-align: center;
 	}
 		
-		ul.actions li
-		{
-		}
+
 	
 	p
 	{
 		line-height: 180%;
 	}
-	
-	strong
-	{
-	}
+
 	
 	a
 	{
@@ -70,7 +58,7 @@
 		overflow: hidden;
 		background-size: cover;
 		margin: 0em auto;
-		width: 1000px;
+		width: 100px;
 	}
 	
 /*********************************************************************************/
@@ -182,62 +170,7 @@
 	ul.contact li a.icon-tumblr:before { background: #31516A; }
 	ul.contact li a.icon-rss:before { background: #F2600B; }
 
-/*********************************************************************************/
-/* Button Style                                                                  */
-/*********************************************************************************/
 
-	.button
-	{
-		display: inline-block;
-		padding: 0em 3em;
-		background: #137ada;
-		border-radius: 8px;
-		letter-spacing: 0.20em;
-		line-height: 4em;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-weight: 400;
-		font-size: 1em;
-		color: #FFF;
-		
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-	}
-	
-	.button:before
-	{
-		display: inline-block;
-		background: #FFC31F;
-		margin-right: 1em;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: center;
-		color: white;
-	}
-	
-/*********************************************************************************/
-/* Heading Titles                                                                */
-/*********************************************************************************/
-
-	.title
-	{
-		margin-bottom: 3em;
-		color: #137ada;
-	}
-	
-	.title h2
-	{
-		text-transform: uppercase;
-		font-family:'proxima-nova', Courier, monospace;
-		font-size: 2.7em;
-	}
-	
-	.title .byline
-	{
-		font-size: 1.7em;
-		color: #6F6F6F;
-	}
 		
 /*********************************************************************************/
 /* 4-column                                                                      */
@@ -312,71 +245,11 @@
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
-header nav .menu-list li {
-}
+
 header { 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }	
 
-/*********************************************************************************/
-/* Logo                                                                          */
-/*********************************************************************************/
-.logo{
-	width: 100px;
-	height: 100px;
-}
-.logo a img{
-	padding: 10px;
-	width: 100px;
-	height: 100px;
-}
-	
-
-/*********************************************************************************/
-/* Menu                                                                          */
-/*********************************************************************************/
-
-	
-
-
-/*********************************************************************************/
-/* Banner                                                                        */
-/*********************************************************************************/
-
-	#banner
-	{
-		overflow: hidden;
-		padding: 10em 0em;
-		
-	/*background: url(images/banner.png) no-repeat center scroll;*/
-		background-size: cover;
-		text-align: center;
-		color: rgba(255,255,255,.8);
-		width: 100%;
-	}
-
-	#banner .title
-	{
-		margin-bottom: 1em;
-		text-transform: uppercase !important;
-		background-color: #137ada;
-	}
-
-	#banner .title h2
-	{
-		color: #137ada;
-	}
-
-	#banner .title .byline
-	{
-		color: #137ada;
-	}
-	
-	#banner .button
-	{
-		margin-top: 10em;
-		background: #137ada !important;
-	}
 
 
 /*********************************************************************************/
@@ -419,46 +292,6 @@ header {
 
 
 
-/*********************************************************************************/
-/* Page                                                                          */
-/*********************************************************************************/
-
-	#page
-	{
-		padding: 2em 0em 5em 0em;
-		text-align: center;
-	}
-	
-	#page .button
-	{
-		margin-top: 2em;
-		display: inline-block;
-		text-align: center;
-	}
-
-/*********************************************************************************/
-/* Content                                                                       */
-/*********************************************************************************/
-
-	#content
-	{
-	}
-
-/*********************************************************************************/
-/* Sidebar                                                                       */
-/*********************************************************************************/
-
-	#sidebar
-	{
-	}
-
-/*********************************************************************************/
-/* Footer                                                                        */
-/*********************************************************************************/
-
-	#footer
-	{
-	}
 
 /*********************************************************************************/
 /* Copyright                                                                     */
@@ -484,128 +317,6 @@ header {
 	{
 		text-decoration: none;
 		color: rgba(255,255,255,0.8);
-	}
-
-	#copyright h3 
-	{
-
-	}
-
-/*********************************************************************************/
-/* Featured                                                                      */
-/*********************************************************************************/
-
-	#featured
-	{
-		overflow: hidden;
-		padding: 5em 0em;
-		background: white;
-		color: #137ada;
-		text-align: center;
-		margin-top: 50px;
-	}
-
-	#featured a
-	{
-		color: #137ada;
-	}
-	
-	#featured .button
-	{
-		background: #137ada;
-		margin-top: 3em;
-		font-size: 1em;
-		color: whitesmoke;
-	}
-
-	#featured .title
-	{
-	}
-
-	#featured .title h2
-	{
-		color: #137ada;
-		font-family: 'proxima-nova', Helvetica, sans-serif;
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	}
-
-	#featured .title .byline
-	{
-		margin-top: 0;
-		color: #137ada;
-	}
-
-	#featured .button:hover{
-		background-color: #137ada;
-		color: white;
-		outline: #0000FF;
-	}
-
-/*********************************************************************************/
-/* Featured                                                                      */
-/*********************************************************************************/
-
-.box
-{
-	padding: 3em 2em 2em 2em;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 8px;
-	text-align: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-
-
-}
-
-
-	#extra
-	{
-		overflow: hidden;
-		padding: 5em 0em;
-	}
-	
-	#extra .title
-	{
-		text-align: center;
-	}
-	
-	#extra .button
-	{
-		margin-top: 5em;
-	}
-	
-	#extra .fa
-	{
-		display: block;
-		margin-bottom: 0.5em;
-		text-align: center;
-		font-size: 3em;
-	}
-	
-	.gallery
-	{
-		overflow: hidden;
-		margin-bottom: 3em;
-	}
-
-
-
-
-
-
-
-	@media (min-width: 40.625em){
-
-	}
-	@media (min-width: 48em){
-
-	}
-	@media (min-width: 62em){
-
-	}
-	
-	pseudo-starter {
-	  content: '';
-	  display: block;
 	}
 
 
@@ -695,15 +406,15 @@ header {
 	}
 	.c-section {
 		padding: 0 var(--s3);
+		top: 145px;
 	}
 	.c-section__title {
-		padding: var(--s2) var(--s3) calc(var(--s6) * 1.8);
-		margin: 0 calc(var(--s3) * -1);
-		color: #fff;
 		font-size: var(--s4);
 		font-weight: 700;
 		letter-spacing: -0.04em;
 		text-align: center;
+		background-color: #137ada;
+		margin-top: 70px;
 	}
 	@media (min-width: 40.625em) {
 		.c-section__title {
@@ -729,8 +440,7 @@ header {
 		background-position: center;
 		margin-left: auto;
 		margin-right: auto;
-		transform: translateY(11rem);
-		z-index: 1;
+		z-index: 0;
 		background-image: url("images/logoo.png");
 	}
 	@media (min-width: 40.625em) {
@@ -823,8 +533,8 @@ header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		transform: skew(0deg, 5deg);
 		background-image: url("pest.png");
+		z-index: 0;
 	}
 	.c-services__item {
 		background: #fff;
@@ -833,7 +543,7 @@ header {
 		box-shadow: 0 7px 20px rgba(100, 28, 2, 0.135);
 		transition: all 300ms ease, transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		position: relative;
-		z-index: 1;
+		z-index: 0;
 		width: 100%;
 	}
 	@media (min-width: 40.625em) {
@@ -979,7 +689,7 @@ header {
 	  box-sizing: border-box;
   }
   
-  html,body{
+  body{
 	min-width: 100%;
 	overflow-x: hidden;
 	font-size: 16px;
@@ -993,7 +703,7 @@ header {
 	position: fixed;
 	min-height: 12vh;
 	min-width: 100%;
-	z-index: 10;
+	z-index: 3;
 	background: #137ada;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -1106,7 +816,7 @@ header {
   
   .intro-section .intro-content .header-btn a span{
 	  position: relative;
-	  z-index: 9;
+	  z-index: 2;
   }
   
   /* ====================
@@ -1311,18 +1021,43 @@ a.float:hover + div.label-container{
 
 
 /*********************************************************************************/
-/*Footer                                                               */
+/*Header Responsiveness                                                              */
 /*********************************************************************************/
-/*.footer .panel-default ul li {
-	margin-left: 10px;
-	margin-right: right;
+@media (max-width: 600px) {
+	.header .copyright {
+		width: 100%;
+  
+   }
+   .c-section span:after {
+	   display: none;
+   }
 }
+ @media (max-width: 800px) {
+   .header {
+	 position: absolute;
+   }
+ }
 
-div ul {
-	display: flex;
+.header .copyright p {
+	padding-left: 10%;
+	color: #3d5b94;;
+	font-size: 0.7em;
+	line-height: 70px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
 }
-*/
-
-footer .fa {
-	padding: 20px;
+@media (max-width: 600px) {
+	.header .copyright p {
+		text-align: center;
+		padding: 0;
+   }
+}
+.header .social {
+	width: 50%;
+	float: right;
+}
+@media (max-width: 600px) {
+	.header .social {
+		width: 100%;
+   }
 }
