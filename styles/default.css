@@ -441,7 +441,7 @@ header {
 		margin-left: auto;
 		margin-right: auto;
 		z-index: 0;
-		background-image: url("images/logoo.png");
+		background-image: url("logoo.png");
 	}
 	@media (min-width: 40.625em) {
 		.c-section__title:after {

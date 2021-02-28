@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Feedback</title>
-  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="styles/css.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="header" class="top">
+  <div class="header" class="top" style="top: 0;">
     <div class="copyright" style="display: inline-block;">
       <p><span class="fa fa-map-marker"><b>218 Scheiding Street</b> <br> <small>Pretoria, Gauteng</small> </span>></p>
       
@@ -26,11 +26,11 @@
         <form action="/action_page.php" class="form">
           <h1>FEEDBACK</h1>
       
-          <label for="name"><b>Phone Number</b></label>
+          <label for="name"><b>Name</b></label>
           <input type="text" placeholder="Enter Name" name="name" required>
           
           <label for="comment"><b>Message</b></label>
-          <textarea rows="4" cols="40" name="comment" placeholder="Enter Comment Here...">
+          <textarea rows="4" cols="40" name="comment">>>>
             </textarea>
     
           <button type="submit" class="bttn">Submit</button>
@@ -73,14 +73,14 @@
 }
 .bg-img {
   /* The image used */
-  background-image: url("pest.png");
+  background-image: url("images/pest.png");
 
   /* Control the height of the image */
-  height: 100%;
+  min-height: 900px;
 
   /* Center and scale the image nicely */
 
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   position: relative;
 }
@@ -104,7 +104,7 @@
 }
 
 /* Full-width input fields */
-  input[type=text], input[type=tel] {
+  input[type=text], textarea {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -112,7 +112,7 @@
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=tel]:focus {
+input[type=text], textarea:focus {
   background-color: #ddd;
   outline: none;
 }
