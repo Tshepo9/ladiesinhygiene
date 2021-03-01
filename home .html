@@ -9,6 +9,7 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script/js.js"></script>
+  <a href="submitted.html" src="submitted.html"></a>
 </head>
 <body>
      
@@ -54,40 +55,42 @@
 
 </div>
 <br>
+<br>
+<br>
 <div class="slideshow-container">
 
   <div class="mySlides fade">
     <div class="numbertext">1 / 6</div>
     <img src="images/slide5.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <div class="text">Fogging</div>
   </div>
   
   <div class="mySlides fade">
     <div class="numbertext">2 / 6</div>
     <img src="images/slide1.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+    <div class="text">Get Rig Of Germs and Viruses</div>
   </div>
   
   <div class="mySlides fade">
     <div class="numbertext">3 / 6</div>
     <img src="images/slide3.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">Sanitize</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">4 / 6</div>
     <img src="images/slide2.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">Cleaning</div>
   </div>
   <div class="mySlides fade">
     <div class="numbertext">5 / 6</div>
     <img src="images/slide4.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">Outdoor</div>
   </div>
   <div class="mySlides fade">
     <div class="numbertext">6 / 6</div>
     <img src="images/slide6.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">Get Rid of Pest</div>
   </div>
   
   </div>
@@ -100,9 +103,37 @@
   </div>
   <br>
 
-        <a href="#" class="float">
+        <button class="float open-button" id="open-button" onclick="show()">
           <p>Get Quotation</p>
-        </a>
+         </button> 
+  <div id="popup">
+       <form action="sendEmail()" method="POST" class="form-container" id="form">
+        <button type="button" id="close" onclick="hide()">X</button>
+        <br>
+        <h4>Get Quotation</h4>
+        <label for="userName">Name</label>
+        <input type="text" placeholder="Name" id="userName" required><br>
+        <label for="sName">Surname</label>
+        <input type="text" id="sName" placeholder="Surname" required><br>
+        <label for="contact">Phone Number</label>
+        <input type="text" placeholder="phone number" required><br>
+        <label for="email">E-mail Address</label>
+        <input type="email" placeholder="thulaczwe98@outlook.com" required id="email"><br>
+         <fieldset>
+          <label for="reqServ">fumigation</label>
+           <input type="checkbox" id="reqServ" value="YES">
+           <label for="reqServ1">Pest Control</label>
+           <input type="checkbox" id="reqServ1" value="YES">
+           <label for="deep">Cleaning</label>
+           <input type="checkbox" id="deep" value="YES">
+         </fieldset>
+
+
+         <button type="submit" class="bttn">Submit</button>
+
+       </form>
+  
+  </div>       
   <div id="featured">
 
     <div class="container">
@@ -243,7 +274,11 @@ Ladies In Hygiene finishes each project with the highest level of quality. With 
       dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000); // Change image every 2 seconds
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
   }
+
+
+  //Form Script
+
+
   </script>
