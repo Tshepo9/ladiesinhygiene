@@ -1,0 +1,186 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the form - fixed at the bottom of the page */
+.open-button {
+  background-color: #0a20e0d7;
+  color: white;
+  padding: 10px 15px 15px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+    position: fixed;
+    top: 560px;
+    right: 35px;
+  border-radius:8px;
+  transition-duration: 0.4s;
+  box-sizing: border-box;
+  box-shadow: 19px 18px 18px rgb(1 0 6);
+}
+
+.open-button:hover{
+  background-color: #f01212b0;
+  opacity: 1;
+}
+
+.formTitle {
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  font-size: 1.27em;
+  color: #210b9e;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  overflow: auto;
+  border: 3px solid #0d26b4;
+  background-color: white;
+
+  color: #09117c;   /*Text color in pop up form*/
+  padding-top: 100px; /* Location of the box */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(32, 16, 179, 0.61); /* Fallback color */
+  background-image: linear-gradient(rgba(255, 0, 0, 0.479), rgba(0, 0, 255, 0.479));
+}
+
+/* Add styles to the form container */
+.form-container {  
+  color: #09117c;   /*Text color in pop up form*/
+  max-width: 300px;
+  height: 740;
+  border-radius: 9px;
+  border-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  padding-bottom: 50px;
+  background-color: white;
+  border: 2px solid #f70000;
+  box-shadow: 0px 0px 18px 9px #14181fbd;
+  position: relative;
+  left: 15%;
+  top: -12%;
+  z-index: 1;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=text], .form-container input[type=email] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Changing the color of checkboxes */
+input[type="checkbox"], input[type="radio"] {             
+  filter: hue-rotate(145deg);
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+textarea{
+  color: rgb(190, 13, 13);
+}
+
+
+.buttons{
+  padding: 7px;
+
+}
+
+.form-group{
+  padding: 7px;
+
+}
+
+/* Styling image after submit is pressed*/
+.ThankYou{
+  position:fixed;
+  width: 70%;
+  height: auto;
+  padding: 0px;
+  border-radius: 6px;
+  left: 6%;
+  top: 15%;
+}
+
+/* Set a style for the submit button */
+.form-container .btn {
+  background-color: #098700;
+  color: white;
+  float: left;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 50%;
+  opacity: 0.8;
+  display: inline;
+  font-family: "Times New Roman", Times, serif";
+}
+
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgba(233, 47, 47, 0.925);
+  border-radius:7px;
+  float: right;
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .form-container{
+  top: -7%;
+  left: 40%;
+}
+.ThankYou{
+  position: fixed;
+  width: 50%;
+  left: 20%;
+  top: 15%;
+  padding: 0px;
+  border-radius: 6px;
+}
+  }

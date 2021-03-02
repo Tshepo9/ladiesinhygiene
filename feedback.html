@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="header" class="top" style="top: 0;">
+  <div class="header" class="top">
     <div class="copyright" style="display: inline-block;">
       <p><span class="fa fa-map-marker"><b>218 Scheiding Street</b> <br> <small>Pretoria, Gauteng</small> </span>></p>
       
@@ -22,72 +22,70 @@
   
     </div>
   </div>
-    <div class="bg-img">
-        <form action="/action_page.php" class="form">
+<div style="display: list-item;">
+        <form class="form">
           <h1>FEEDBACK</h1>
       
           <label for="name"><b>Name</b></label>
-          <input type="text" placeholder="Enter Name" name="name" required>
+          <input type="text" placeholder="Enter Name" name="name" id="name" required>
           
           <label for="comment"><b>Message</b></label>
-          <textarea rows="4" cols="40" name="comment">>>>
+          <textarea rows="4" cols="40" name="comment" id="comment">>>>
             </textarea>
     
-          <button type="submit" class="bttn">Submit</button>
-        </form>
+            <button type="button" class="bttn" id="submit" onclick="add()">Submit</button>        </form>
+
+        <div id="results">
+
+        </div>
       </div>
 <!--Footer-->
-      <div class="row" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 20px; text-align: center;">
-        <div class="column">
-          <h3>Follow us:</h3>
-          <ul>
-            <li><span class="fa fa-facebook-square"> <small><small>Facebook</small></small></span></li>
-            <li><span class="fa fa-twitter-square"> <small><small>Twitter</small></small> </span></li>
-          </ul>
-              
-        </div>
-        <div class="column">
-          <h3>Contact us</h3>
-          <ul>
-            <li><span class="fa fa-phone"><small><small>+27 72 284 7888</small></small> </span></li>
-            <li><span class="fa fa-phone"><small><small>+27 74 027 9395</small></small> </span></li>
-            <li><span class="fa fa-envelope"><small><small>ladieshygiene@gmail.com</small></small> </span></li>
-           
-          </ul>
-        </div>
-        <div class="column">
-          <h3>Visit us</h3>
-          <ul>
-            <li><span class="fa fa-map-marker"> <small>218 Scheiding Street</small>
-            <small><small>Pretoria central</small></small></span></li>
-            <li><span class="fa fa-user"><small><small>+27 72 284 7888</small></small> </span></li>
-      
-          </ul>
-        </div>
-      </div>
+</br>
+<div class="row" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 20px; text-align: center;">
+  <div class="column">
+    <h3>Follow us:</h3>
+    <ul>
+      <li><span class="fa fa-facebook-square"> <small><small>Facebook</small></small></span></li>
+      <li><span class="fa fa-twitter-square"> <small><small>Twitter</small></small> </span></li>
+    </ul>
+        
+  </div>
+  <div class="column">
+    <h3>Contact us</h3>
+    <ul>
+      <li><span class="fa fa-phone"><small><small>+27 72 284 7888</small></small> </span></li>
+      <li><span class="fa fa-phone"><small><small>+27 74 027 9395</small></small> </span></li>
+      <li><span class="fa fa-envelope"><small><small>ladieshygiene@gmail.com</small></small> </span></li>
+     
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Visit us</h3>
+    <ul>
+      <li><span class="fa fa-map-marker"> <small>218 Scheiding Street</small>
+      <small><small>Pretoria central</small></small></span></li>
+      <li><span class="fa fa-phone"><small><small>+27 72 284 7888</small></small> </span></li>
+
+    </ul>
+  </div>
+</div>
+<div class="cpright" style="width: 100%; background-color: #464444; height: max-content; font-size: 0.7em; color: #b6b4b4;">&copy; 2021 Designed by The BitLegion</div>
+
 </body>
 </html>
 <style>
+   body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(images/pest.png);
+  }
 .top {
   top: 0;
-}
-.bg-img {
-  /* The image used */
-  background-image: url("images/pest.png");
-
-  /* Control the height of the image */
-  min-height: 900px;
-
-  /* Center and scale the image nicely */
-
-  background-repeat: repeat;
-  background-size: cover;
-  position: relative;
 }
 
 /* Add styles to the form container */
 .form {
-  position: relative;
   text-align: center;
   top: 200px;
   margin: 20px;
@@ -137,3 +135,23 @@ textarea {
   opacity: 1;
 }
 </style>
+
+<script>
+  function add() {
+  var name = document.getElementById("name").value;
+  var age = document.getElementById("comment").value;
+  
+  if (name == "" || comment == "") {
+    alert("Please fill all fields.")
+  } else {
+  
+    var newdiv = document.createElement("div");
+    newdiv.className += "cont";
+    newdiv.innerHTML = "Name: "+ name + "<br>Comment: " + comment + "<hr>";
+    document.getElementById("results").appendChild(newdiv);
+    
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+  }
+}
+</script>
