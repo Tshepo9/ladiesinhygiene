@@ -16,7 +16,7 @@
   <link href="styles/popup.css" rel="stylesheet" type="text/css"> 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<a href="submitted.html" src="submitted.html"></a>
+
 
 </head>
 <body>
@@ -27,8 +27,7 @@
 
     </div>
     <div class="social">
-      <a href="#" class="support"><span class="fa fa-phone">   <b> +27 72 284 7888</b>  <p><small>Call</small></p></span>
-      </a>
+      <a href="#" class="support"><span class="fa fa-phone"><b> +27 72 284 7888</b><p><small>Call</small></p></span></a>
       <a href="#" class="face"><span class="fa fa-clock-o"><b> Mon - Fr 8:00 - 17:30</b><p><small>weekends: 8:00 - 14:00</small></p> </span></a>
   
     </div>
@@ -235,21 +234,21 @@ Ladies In Hygiene finishes each project with the highest level of quality. With 
 </body>
 
 <!--Form starts here with Floating get qoutation-->
-<button class="open-button" id="open-button" onclick="openForm()">Get Quotation!</button>
+<button class="open-button" id="open-button" onclick = "openForm()">Get Quotation!</button>
 
-<div class="form-popup" id="myForm">
+     <div class="form-popup" id="myForm">
 
-     <form  action="javascript:submitForm()" method="POST" class="form-container">
-        <h3>Fill Below</h3>
+           <form  action="javascript:submitForm()" method="POST" class="form-container">
+               <h3>Fill Below</h3>
                 
                 
-<label for="name">Name: </label>
-<input id="name" name="name" type="name" placeholder="Tshediso" />
+                   <label for="name">Name: </label>
+                     <input id="name" name="name" type="name" placeholder="Tshediso" />
 
-<br>
+                           <br>
 
-<label for="surname">Surname: </label>
-<input id="surname" name="surname" type="surname" placeholder="Monene" />
+                              <label for="surname">Surname: </label>
+                                <input id="surname" name="surname" type="surname" placeholder="Monene" />
        
 <br>
     <label for="contact">Contact Numbers:</label>
@@ -276,7 +275,7 @@ Ladies In Hygiene finishes each project with the highest level of quality. With 
 
 
 <div class="buttons">
-<button class="btn"  >Submit</button>
+<button class="btn">Submit</button>
 <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
 </div>
 
@@ -289,5 +288,23 @@ Ladies In Hygiene finishes each project with the highest level of quality. With 
 </form>
 
 </div>
+
+<script>
+  function openForm() {        
+     document.getElementById("myForm").style.display = "block";	
+     }
+
+ function closeForm() {
+     document.getElementById("myForm").style.display = "none";
+     }
+
+   $(document).ready(function () {
+       // Hide the div
+       $(".open-button").hide();
+       // Show the div after 6s
+       $(".open-button").delay(6000).fadeIn(100);  
+   });
+
+</script>
 
 </html>
