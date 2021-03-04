@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,11 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script/js.js"></script>
-  <a href="submitted.html" src="submitted.html"></a>
+  <link href="styles/popup.css" rel="stylesheet" type="text/css"> 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<a href="submitted.html" src="submitted.html"></a>
+
 </head>
 <body>
      
@@ -225,6 +230,81 @@ Ladies In Hygiene finishes each project with the highest level of quality. With 
 <div class="cpright" style="width: 100%; background-color: #464444; height: max-content; font-size: 0.7em; color: #b6b4b4;">&copy; 2021 Designed by The BitLegion</div>
 </body>
 
+<!--Form starts here with Floating get qoutation-->
+<button class="open-button" id="open-button" onclick="openForm()">Get Quotation!</button>
+
+<div class="form-popup" id="myForm">
+     <form action="https://script.google.com/macros/s/AKfycbyr8r5xFEfKendUvyeGAFNIjD3k3VrTZkpNGb6nrZsIT5FL9kdKfkhye5s9TxG99AWoug/exec" 
+     method="POST" class="form-container">
+        <h3>Fill Below</h3>
+                
+                
+<label for="name">Name: </label>
+<input id="name" name="name" type="name" placeholder="Tshediso" />
+
+<br>
+
+<label for="surname">Surname: </label>
+<input id="surname" name="surname" type="surname" placeholder="Monene" />
+       
+<br>
+    <label for="contact">Contact Numbers:</label>
+    <input id="contact" name="contact" type="contact" placeholder="0712345678" required>
+<br>
+
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="" placeholder="nkambule@gmail.com" />
+<br>
+
+<label for="message">Message: </label>
+<br>
+<textarea id="message" type="message" name="message" rows="5" style="margin: 0px; width: 272px; height: 48px;"
+          placeholder="Please tell us what we can do for you..."></textarea>
+
+<br>
+  <label for="cal">Choose a date for service:</label>
+   <div class="col-sm-6">
+    <div class="form-group">
+   <span class="form-label"></span>
+    <input id="date" type="date" name="date">
+    </div>
+    </div>
+
+
+<div class="buttons">
+<button class="btn" >Submit</button>
+<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+</div>
+
+<div style="display:none;" id="thankyou_message">
+  <h2>
+      <em>Thanks</em> for contacting us!
+      We will get back to you soon!
+  </h2>
+</div>
+
+</form>
+</div>
+
+
+
+<script>
+     function openForm() {        
+        document.getElementById("myForm").style.display = "block";	
+        }
+	
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        }
+
+      $(document).ready(function () {
+          // Hide the div
+          $(".open-button").hide();
+          // Show the div after 6s
+          $(".open-button").delay(6000).fadeIn(100);  
+      });
+
+</script>
 </html>
 
 
@@ -247,9 +327,10 @@ Ladies In Hygiene finishes each project with the highest level of quality. With 
     slides[slideIndex-1].style.display = "block";  
     setTimeout(showSlides, 5000); // Change image every 5 seconds
   }
-
-
-  //Form Script
-
-
   </script>
+
+<script data-cfasync="false" type="text/javascript" src="./script/javascript.js"></script>
+
+
+https://script.google.com/macros/s/AKfycbyr8r5xFEfKendUvyeGAFNIjD3k3VrTZkpNGb6nrZsIT5FL9kdKfkhye5s9TxG99AWoug/exec
+
