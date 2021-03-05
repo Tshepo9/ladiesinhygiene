@@ -25,52 +25,46 @@ function hide() {
   document.getElementById("popup").style.display = "none";
 }
 
-//Send Email
-function submitForm(){
-  // get input value
 
-  var userName =  document.getElementById("userName").value;
-  var sName = document.getElementById("sName").value;
-  var contact = document.getElementById("contact").value;
-  var email = document.getElementById("email").value;
-  var  reqServ="NO";
-   //check if the button is checked for fumigation
-   if(document.getElementById("reqServ").checked){   
-       reqServ = document.getElementById("reqServ").value;
-   }
+//javascript that send email
 
-      var  fogging="NO";
-     //check if the button is checked for fumigation
-     if(document.getElementById("reqServ1").checked){   
-      fogging = document.getElementById("reqServ1").value;
-  }
-   var DeepCleaning ="NO";
+ // a listen for submit button
+  //document.querySelector(".form-container").addEventListener("submit",submitForm);
 
-    //check if the button is checked for deep cleaning
-    if(document.getElementById("deep").checked){   
-      DeepCleaning = document.getElementById("deep").value;
-  }
-    
- // let reqServ =document.getElementById("reqServ").value;
-  let date = document.getElementById("date").value
+  // function to send a email
   
- // document.querySelector(".form-container").reset();
-  sendEmail(userName ,sName,contact,email,reqServ,fogging,DeepCleaning,date);
-}
 
+  function submitForm(){
+    
 
-// send email
-function sendEmail(userName,sName,contact,email,reqServ,fogging,DeepCleaning,date){
-  Email.send({
-      Host : "smtp.gmail.com",
-      Username : "buchalucha17@gmail.com",
-      Password : "ahjfzfbjgzoajlch",
-      To : "201707790@swave.smu.ac.za",
-      From : "buchalucha17@gmail.com",
-      Subject : userName+'  Send you a mail',
-      Body :"Name:"+userName+"<br>Surname:"+sName+"<br>Contact:"+contact+"<br>Email:  "
-           +email+"<br>Fumigation:"+reqServ+"<br>Fogging:"+fogging+
-           "<br>Deep Cleaning:"+DeepCleaning+"<br>Date:"+date,
-  }).then(window.location.replace("submitted.html"),    //replaces the current page with 'submitted.html'
-  );
-}
+    //define
+    
+    // get input value
+
+    var userName =  document.getElementById("name").value;
+    var sName = document.getElementById("surname").value;
+    var contact = document.getElementById("contact").value;
+    var email = document.getElementById("email").value;
+    var Message=document.getElementById("message").value;
+    var date = document.getElementById("date").value;
+     
+ //call function to send email
+    sendEmail(userName ,sName,contact,email,Message,date);
+
+  }
+
+  // send email
+  function sendEmail(userName,sName,contact,email,Message,date){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "ladieshygien@gmail.com",
+        Password : "Mpfeseni.88",
+        To : "ladieshygien@gmail.com",
+        From : "ladieshygien@gmail.com",
+        Subject : userName+ 'Send you a mail',
+        Body :"Name:"+userName+"<br>Surname:"+sName+"<br>Contact:"+contact+"<br>Email:"
+             +email+"<br>Message:<br>"+Message+"<br>Date:"+date,
+    }).then(message => alert("Email sent succesfully")
+    );
+  }
+
